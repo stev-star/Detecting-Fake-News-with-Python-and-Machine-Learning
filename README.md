@@ -20,7 +20,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 ## read the data using read_csv
 ```python
-df_fake=pd.read_csv("C:\\Users\\Documents\\news\\news.csv")
+df_fake=pd.read_csv("C:\\Users\\stpgh\\Downloads\\Documents\\news\\news.csv")
 ```
 ### - get the shape of the data
 ```python
