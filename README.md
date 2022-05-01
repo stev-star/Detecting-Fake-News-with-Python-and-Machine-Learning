@@ -30,7 +30,7 @@ df_fake.shape
 ```python
 df_info()
 ```
-## what is TfidfVectorizer
+## what is TfidfVectorizer?
 
 ### Tf(Term Frequency): 
 The number of times a word appears in a document divided by the total number of words in 
@@ -40,9 +40,40 @@ Words that occur many times in a document, but also occur many times in many oth
 Inverse data frequency determines the weight of rare words across all documents in the corpus.
 
 
-## what is PassiveAggressiveClassifier
+## what is PassiveAggressiveClassifier?
 
 Passive Aggressive Classifier is a classification algorithm that falls under the category of online learning in
 machine learning. It works by responding as passive for correct classifications and responding as aggressive for 
 any miscalculation.
+
+## Split the dataset into training and testing data.
+```python
+x_train,x_test,y_train,y_test=train_test_split(texts, labels, test_size=0.2, random_state=7)
+```
+
+## Initializing a TfidfVectorizer
+fit and transform the vectorizer on the train set, and transform the vectorizer on the test set.
+```python
+tfidf_vectorizer=TfidfVectorizer(stop_words='english', max_df=0.8)
+tfidf_train=tfidf_vectorizer.fit_transform(x_train) 
+tfidf_test=tfidf_vectorizer.transform(x_test)
+```
+
+## initialize a PassiveAggressiveClassifier
+fit tfidf_train and y_train.predict on the test result from  TfidfVectorizer and calculate the accuracy score
+```python
+pass_Ag=PassiveAggressiveClassifier()
+pass_Ag.fit(tfidf_train,y_train)
+y_pred=pass_Ag.predict(tfidf_test)
+score=accuracy_score(y_test,y_pred)
+print(f'Accuracy: {round(score*100,2)}%')
+```
+
+## confusion matrix
+ confusion matrix is to enable us gain insight into the number of false and true negatives and positives.
+```python
+confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
+```
+
+
 
