@@ -31,12 +31,17 @@ df_fake.shape
 df_info()
 ```
 ## what is TfidfVectorizer
-### Tf(Term Frequency): The number of times a word appears in a document divided by the total number of words in 
+
+### Tf(Term Frequency): 
+The number of times a word appears in a document divided by the total number of words in 
 the document. Every document has its own term frequency.
-### idf(Inverse Document Frequency): Words that occur many times in a document, but also occur many times in many others.
+### idf(Inverse Document Frequency): 
+Words that occur many times in a document, but also occur many times in many others.
 Inverse data frequency determines the weight of rare words across all documents in the corpus.
 
+
 ## what is PassiveAggressiveClassifier
+
 Passive Aggressive Classifier is a classification algorithm that falls under the category of online learning in
 machine learning. It works by responding as passive for correct classifications and responding as aggressive for 
 any miscalculation.
