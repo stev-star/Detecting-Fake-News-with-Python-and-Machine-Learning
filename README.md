@@ -1,5 +1,5 @@
 # Detecting-Fake-News-with-Python-and-Machine-Learning
-## What is fake news
+## What is fake news ?
 Fake news is to incorporate information that leads people to the wrong path. Nowadays fake news spreading like 
 water and people share this information without verifying it.
 
