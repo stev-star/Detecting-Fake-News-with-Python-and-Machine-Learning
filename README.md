@@ -32,7 +32,7 @@ df_info()
 ```
 ## what is TfidfVectorizer?
 
-[TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
+more about [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
 ### Tf(Term Frequency): 
 The number of times a word appears in a document divided by the total number of words in 
 the document. Every document has its own term frequency.
